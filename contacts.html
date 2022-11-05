@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"   rel="stylesheet">
+ 
+  
+    <title>Cantact us</title>
+</head>
+<body>
+
+  <div class="about-logo ">
+    <img src="bryImage/2 2.png" alt="">
+  </div>
+  <button class="btn-back">
+    <i class="material-icons md-36"> <a href="index.html">home</a> </i>
+</button>
+<div class="icon-contact">
+  <i class="material-icons md-36">phone</i>
+  <h4>Contact Us</h4>
+</div>
+ 
+
+     
+        <div class="row">
+          <div class="col contact" >
+       
+      
+          <q class="qoute">Bryant's Law zealously advocates <br> for the clients best interests solely <br> based upon the clients instructions.</q>
+
+
+   
+  </div>
+  
+  <div class="col contact-form">
+ 
+
+ <h1>Query Form</h1>
+ <form method="POST">
+
+ <form method="post" onsubmit="sendEmail(); reset(); return false;"> 
+  <input type="text"  id="text" placeholder="Enter your first name...">
+  <input type="text"  id="textn" placeholder="Enter your last name...">
+  <input type="text"  id="phone" placeholder="Enter your phone number...">
+  <input type="email"  id="email" placeholder="Enter your email...">
+  <input type="textarea" id="message" placeholder="Enter your message here...">
+ <button class="submit">submit</button>
+</form>
+
+
+</div>
+
+</div>
+<style>
+      @media only screen and (min-width: 375px) and (max-width: 1290px){
+
+    .row .col.contact{
+   height: 80%;
+
+    }
+  }
+  .row .col.contact-form h1{
+    margin-left: 25%;
+    font-size:150%;
+  }
+  .row .col.contact-form{
+    margin-left: 9%;
+    margin-top: 0%;
+  }
+  .row .col.contact{
+    background: #050A30;
+    color: rgb(219, 206, 183);
+    margin-top: 5.5%;
+    margin-left: 5%;
+    width: 35%;
+    height: 70%;
+   
+
+  }
+  q{
+    display: block;
+    margin-top: 25%;
+  text-align: center;
+   line-height: 1.5;
+   color: rgb(199,147,48);
+   font-style: italic;
+   font-size: 18px;
+   
+
+
+  }
+  p{
+text-align: center; 
+margin-top: 25%; }
+  body{
+    background: #050A30;
+    font-family: sans-serif;
+
+  }
+  .col {
+  float: left;
+  width: 50%;
+  
+}
+
+.row{
+margin-left: 5.9%;
+margin-right:5.5%;
+width:auto;
+height: 450px;
+  margin-top: 2%;
+  background: white;
+  color: #050A30;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+      .submit{
+        display: block;
+  background: #050A30;
+  top: 20%;
+margin-left: 30%;
+  color: white;
+  margin-top: 20px;
+  height: 32px;
+  width: 18%;
+  }
+
+#text,#textn, #email, #phone{
+  width: 80%;
+  color: #050A30;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  margin-bottom: 16px;
+
+  resize: vertical;
+}
+#message{
+  width: 80%;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+
+button:hover {
+
+box-shadow: 0 1px 15px rgba(4, 242, 250, 0.438), 0 1px 28px rgba(5, 219, 247, 0.815);
+}
+
+.btn-back{
+      background: #050A30;
+      box-shadow: 0 1px 10px black;
+
+      color: white;
+      margin-left: 89%;
+      margin-top: 1%;
+      border-radius: 50%;
+      height:85px;
+      width: 85px;
+     
+  }
+
+  .btn-back i a{
+      text-decoration:none ;
+      color: white;
+      font-size: 20px;
+      margin: 0 auto;
+      
+
+    
+
+  }
+
+
+.icon-contact{
+display: block;
+margin: 0 auto;
+text-align: center;
+margin-top: -5%;
+
+  color: white;
+  padding: 10px;
+
+}
+.icon-contact i{
+  color: white;
+  font-size: 23px;
+  
+}
+.icon-contact h4{
+  color: white;
+font-size: 23px;
+margin-top: 0%;
+}
+  
+
+.about-logo{
+  margin-top: -5%;
+  margin-left: 5%;
+  display: block;
+  height: 100px;
+  width: 180px;
+  background: #050A30;
+
+
+      }
+        .about-logo img{
+          display: block;
+  margin-left: 0%;
+  height: 300px;
+  width: 300px;
+  top: -1%;
+  
+  }
+
+
+
+
+
+
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+function sendEmail(){
+ 
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "karobiaanastasia@gmail.com",
+        Password : " ",
+        To : 'karobiaannah@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "This is my subject",
+        Body : message
+    }).then(
+      message => alert(message)
+    );
+    }
+
+    </script>
+</body>
+</html>
